@@ -5,22 +5,15 @@ import { content, t } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { cn } from "@/lib/utils";
 
-function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
+function Logo() {
   return (
-    <span className="flex items-center gap-3">
-      <svg viewBox="0 0 48 48" className="h-8 w-8 shrink-0" aria-hidden="true">
-        <path d="M5 13.5 17 8v32H5z" fill="var(--brass)" />
-        <path d="M21 5.5 37 13v27H21z" fill="var(--brass)" />
-      </svg>
-      <span
-        className={cn(
-          "font-display text-[1.05rem] tracking-[0.02em] whitespace-nowrap",
-          tone === "light" ? "text-ivory" : "text-teal",
-        )}
-      >
-        MH Group LLC
-      </span>
-    </span>
+    <img
+      src="/images/logo-mh-group-header.svg"
+      alt="MH Group LLC"
+      className="h-12 w-auto shrink-0 lg:h-14"
+      width={533}
+      height={133}
+    />
   );
 }
 
