@@ -200,6 +200,10 @@ export const content = {
     },
     philosophy: {
       title: { en: "Our Philosophy | MH Group LLC", "zh-TW": "我們的理念 | MH Group LLC" },
+      heroHeading: {
+        en: "The Standard Behind Every Home",
+        "zh-TW": "每一個家背後的標準",
+      },
       description:
         "Built on trust, driven by excellence — the values behind MH Group LLC's integrated real estate and home services in New York.",
     },
