@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { content, t } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { CtaLink } from "@/components/Cta";
