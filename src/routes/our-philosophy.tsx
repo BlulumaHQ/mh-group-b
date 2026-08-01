@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { content, t } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { FinalCta, PageHero, Partnership, PhilosophySplit } from "@/components/sections";
@@ -6,16 +7,12 @@ import { iconMap } from "@/components/Icons";
 
 export const Route = createFileRoute("/our-philosophy")({
   component: PhilosophyPage,
-  head: () => ({
-    meta: [
-      { title: "Our Philosophy | MH Group LLC" },
-      { name: "description", content: content.pages.philosophy.description },
-      { property: "og:title", content: "Our Philosophy | MH Group LLC" },
-      { property: "og:description", content: content.pages.philosophy.description },
-      { property: "og:url", content: "/our-philosophy" },
-    ],
-    links: [{ rel: "canonical", href: "/our-philosophy" }],
-  }),
+  head: () =>
+    pageHead({
+      title: "Our Philosophy | MH Group LLC",
+      description: content.pages.philosophy.description,
+      path: "/our-philosophy",
+    }),
 });
 
 function PhilosophyPage() {

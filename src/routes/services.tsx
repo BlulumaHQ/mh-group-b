@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { content, t } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { iconMap } from "@/components/Icons";
@@ -33,16 +34,12 @@ const serviceImages: Record<string, { src: string; alt: string; w: number; h: nu
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
-  head: () => ({
-    meta: [
-      { title: "Services | MH Group LLC" },
-      { name: "description", content: content.pages.services.description },
-      { property: "og:title", content: "Services | MH Group LLC" },
-      { property: "og:description", content: content.pages.services.description },
-      { property: "og:url", content: "/services" },
-    ],
-    links: [{ rel: "canonical", href: "/services" }],
-  }),
+  head: () =>
+    pageHead({
+      title: "Services | MH Group LLC",
+      description: content.pages.services.description,
+      path: "/services",
+    }),
 });
 
 function ServicesPage() {
