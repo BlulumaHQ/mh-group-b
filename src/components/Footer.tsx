@@ -10,14 +10,14 @@ export function Footer() {
     <footer className="bg-teal-deep text-ivory">
       <div className="shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.3fr_1fr] lg:gap-10">
         <div>
-          <span className="flex items-center gap-3">
-            <svg viewBox="0 0 48 48" className="h-9 w-9 shrink-0" aria-hidden="true">
-              <path d="M5 13.5 17 8v32H5z" fill="var(--brass)" />
-              <path d="M21 5.5 37 13v27H21z" fill="var(--brass)" />
-            </svg>
-            <span className="font-display text-lg">MH Group LLC</span>
-          </span>
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/65">
+          <img
+            src="/images/logo-mh-group-circle.svg"
+            alt="MH Group LLC"
+            width={88}
+            height={88}
+            className="h-[88px] w-[88px] rounded-full border border-brass/40 p-px"
+          />
+          <p className="mt-6 max-w-xs text-sm leading-relaxed text-ivory/65">
             {t(content.footer.blurb, lang)}
           </p>
         </div>
