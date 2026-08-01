@@ -30,7 +30,7 @@ export function CtaLink({
   return (
     <Link
       to={to}
-      hash={hash}
+      {...(hash ? { hash } : {})}
       className={cn(baseClasses, variants[variant], className)}
     >
       <span>{children}</span>
