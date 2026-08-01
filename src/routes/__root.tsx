@@ -81,15 +81,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Home | MH Group LLC" },
-      {
-        name: "description",
-        content:
-          "MH Group LLC provides integrated real estate, property management, renovation, interior styling, furnishing, and move-in services in New York.",
-      },
-      { property: "og:site_name", content: "MH Group LLC" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#133846" },
     ],
     links: [

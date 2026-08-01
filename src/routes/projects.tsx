@@ -1,20 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { content, t } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { FinalCta, PageHero, ProjectsGrid } from "@/components/sections";
 
 export const Route = createFileRoute("/projects")({
   component: ProjectsPage,
-  head: () => ({
-    meta: [
-      { title: "Projects | MH Group LLC" },
-      { name: "description", content: content.pages.projects.description },
-      { property: "og:title", content: "Projects | MH Group LLC" },
-      { property: "og:description", content: content.pages.projects.description },
-      { property: "og:url", content: "/projects" },
-    ],
-    links: [{ rel: "canonical", href: "/projects" }],
-  }),
+  head: () =>
+    pageHead({
+      title: "Projects | MH Group LLC",
+      description: content.pages.projects.description,
+      path: "/projects",
+    }),
 });
 
 function ProjectsPage() {

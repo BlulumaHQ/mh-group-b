@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { content, t } from "@/content/site";
 import { useLanguage } from "@/lib/language";
 import { CtaLink } from "@/components/Cta";
@@ -13,25 +14,15 @@ import {
 
 export const Route = createFileRoute("/")({
   component: Home,
-  head: () => ({
-    meta: [
-      { title: "Home | MH Group LLC" },
-      {
-        name: "description",
-        content:
-          "MH Group LLC provides integrated real estate, property management, renovation, interior styling, furnishing, and move-in services in New York.",
-      },
-      { property: "og:title", content: "Home | MH Group LLC" },
-      {
-        property: "og:description",
-        content:
-          "MH Group LLC provides integrated real estate, property management, renovation, interior styling, furnishing, and move-in services in New York.",
-      },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
+  head: () =>
+    pageHead({
+      title: "Home | MH Group LLC",
+      description:
+        "MH Group LLC provides integrated real estate, property management, renovation, interior styling, furnishing, and move-in services in New York.",
+      path: "/",
+    }),
 });
+
 
 function Hero() {
   const { lang } = useLanguage();
