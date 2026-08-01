@@ -46,9 +46,9 @@ function Hero() {
         fetchPriority="high"
         className="absolute inset-0 -z-10 h-full w-full object-cover object-center lg:left-auto lg:w-[60%]"
       />
-      <div className="absolute inset-0 -z-10 bg-teal/85 lg:bg-gradient-to-r lg:from-teal lg:via-teal lg:via-38% lg:to-teal/25" />
+      <div className="absolute inset-0 -z-10 bg-teal/80 lg:bg-transparent lg:bg-gradient-to-r lg:from-teal lg:from-30% lg:via-teal/85 lg:via-52% lg:to-transparent" />
       <div className="shell flex min-h-[88svh] items-center pt-32 pb-20 lg:pt-36">
-        <div className="max-w-xl lg:max-w-[40%]">
+        <div className="max-w-xl lg:w-[46%] lg:max-w-[38rem]">
           <p className="eyebrow">{t(content.hero.eyebrow, lang)}</p>
           <h1 className="display-hero mt-6 text-ivory">
             {t(content.hero.headline, lang).map((line) => (
