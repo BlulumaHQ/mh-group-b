@@ -214,6 +214,6 @@ export const content = {
   },
 } as const;
 
-export function t<T>(field: { en: T; "zh-TW": T }, lang: Lang): T {
-  return field[lang];
+export function t<T>(field: { readonly en: T; readonly "zh-TW": unknown }, lang: Lang): T {
+  return field[lang] as T;
 }
