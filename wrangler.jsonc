@@ -1,11 +1,13 @@
+// Nitro (cloudflare preset) emits the deployable Worker to dist/server + dist/client
+// and regenerates dist/server/wrangler.json from this file at build time.
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "mh-group-llc",
-  "main": ".output/server/index.mjs",
+  "main": "dist/server/index.mjs",
   "compatibility_date": "2026-07-31",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
-    "directory": ".output/public",
+    "directory": "dist/client",
     "binding": "ASSETS"
   },
   "observability": {
