@@ -214,6 +214,9 @@ export const content = {
   },
 } as const;
 
-export function t<T>(field: { readonly en: T; readonly "zh-TW": unknown }, lang: Lang): T {
-  return field[lang] as T;
+export function t<F extends { readonly en: unknown; readonly "zh-TW": unknown }>(
+  field: F,
+  lang: Lang,
+): F["en"] {
+  return (lang === "en" ? field.en : field["zh-TW"]) as F["en"];
 }
