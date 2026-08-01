@@ -22,21 +22,15 @@ const LanguageContext = createContext<LanguageContextValue>({
 });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+  // Chinese site is disabled — the app is English-only for now.
+  const [lang] = useState<Lang>("en");
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored === "en" || stored === "zh-TW") setLangState(stored);
-  }, []);
-
-  useEffect(() => {
+    window.localStorage.removeItem(STORAGE_KEY);
     document.documentElement.lang = lang;
   }, [lang]);
 
-  const setLang = useCallback((next: Lang) => {
-    setLangState(next);
-    window.localStorage.setItem(STORAGE_KEY, next);
-  }, []);
+  const setLang = useCallback((_next: Lang) => {}, []);
 
   const value = useMemo(() => ({ lang, setLang }), [lang, setLang]);
 

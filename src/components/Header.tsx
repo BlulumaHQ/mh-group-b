@@ -18,7 +18,7 @@ function Logo() {
 }
 
 export function Header() {
-  const { lang, setLang } = useLanguage();
+  const { lang } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -75,9 +75,6 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <LanguageSwitch lang={lang} setLang={setLang} />
-        </div>
 
         <button
           type="button"
@@ -112,50 +109,9 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <div className="pt-6">
-            <LanguageSwitch lang={lang} setLang={setLang} />
-          </div>
         </nav>
       </div>
     </header>
   );
 }
 
-function LanguageSwitch({
-  lang,
-  setLang,
-}: {
-  lang: "en" | "zh-TW";
-  setLang: (l: "en" | "zh-TW") => void;
-}) {
-  return (
-    <div className="flex items-center gap-3 text-[0.72rem] font-semibold tracking-[0.14em] uppercase">
-      <button
-        type="button"
-        onClick={() => setLang("en")}
-        aria-pressed={lang === "en"}
-        className={cn(
-          "py-1 transition-colors duration-300",
-          lang === "en" ? "text-brass" : "text-ivory/70 hover:text-brass",
-        )}
-      >
-        EN
-      </button>
-      <span aria-hidden="true" className="text-ivory/30">
-        |
-      </span>
-      <button
-        type="button"
-        onClick={() => setLang("zh-TW")}
-        aria-pressed={lang === "zh-TW"}
-        lang="zh-TW"
-        className={cn(
-          "py-1 transition-colors duration-300",
-          lang === "zh-TW" ? "text-brass" : "text-ivory/70 hover:text-brass",
-        )}
-      >
-        中文
-      </button>
-    </div>
-  );
-}
