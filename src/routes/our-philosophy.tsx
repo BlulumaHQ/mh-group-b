@@ -24,7 +24,7 @@ function PhilosophyPage() {
     <>
       <PageHero
         eyebrow={t(content.philosophy.eyebrow, lang)}
-        heading={t(content.philosophy.heading, lang).join(" ")}
+        heading={t(content.pages.philosophy.heroHeading, lang)}
         image="/images/projects/upper-west-side-86th-after-03.webp"
         imageAlt="Renovated Upper West Side residence interior"
       />
