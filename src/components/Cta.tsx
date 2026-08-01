@@ -4,7 +4,7 @@ import { IconArrow } from "./Icons";
 import { cn } from "@/lib/utils";
 
 const baseClasses =
-  "group inline-flex items-center justify-center gap-3 rounded-none px-7 py-3.5 whitespace-nowrap text-[0.72rem] font-semibold uppercase tracking-[0.18em] transition-colors duration-300";
+  "group inline-flex items-center justify-center gap-3 rounded-none px-7 py-3.5 text-[0.72rem] font-semibold uppercase tracking-[0.18em] transition-colors duration-300";
 
 const variants = {
   primary: "bg-brass text-teal hover:bg-brass-soft",

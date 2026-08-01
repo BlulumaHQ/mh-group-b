@@ -176,7 +176,7 @@ export function Partnership() {
   const { lang } = useLanguage();
   return (
     <section id="partnership" className="scroll-mt-24 bg-background">
-      <div className="shell grid items-center gap-12 py-20 lg:grid-cols-2 lg:py-24">
+      <div className="shell grid min-w-0 grid-cols-[minmax(0,1fr)] items-center gap-12 py-20 lg:grid-cols-2 lg:py-24">
         <div>
           <svg viewBox="0 0 48 48" className="h-12 w-12" aria-hidden="true">
             <path d="M5 13.5 17 8v32H5z" fill="var(--brass)" />
