@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://mhgroupny.com/sitemap.xml
