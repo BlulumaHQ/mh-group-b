@@ -178,10 +178,13 @@ export function Partnership() {
     <section id="partnership" className="scroll-mt-24 bg-background">
       <div className="shell grid min-w-0 grid-cols-[minmax(0,1fr)] items-center gap-12 py-20 lg:grid-cols-2 lg:py-24">
         <div>
-          <svg viewBox="0 0 48 48" className="h-12 w-12" aria-hidden="true">
-            <path d="M5 13.5 17 8v32H5z" fill="var(--brass)" />
-            <path d="M21 5.5 37 13v27H21z" fill="var(--brass)" />
-          </svg>
+          <img
+            src="/images/logo-mh-group-mark.svg"
+            alt="MH Group LLC"
+            className="h-12 w-auto"
+            width={350}
+            height={340}
+          />
           <p className="eyebrow mt-8">{t(content.partnership.eyebrow, lang)}</p>
           <h2 className="display-section mt-3 text-teal">{content.partnership.heading}</h2>
           <p className="mt-6 max-w-lg text-[0.95rem] leading-relaxed text-muted-ink">
