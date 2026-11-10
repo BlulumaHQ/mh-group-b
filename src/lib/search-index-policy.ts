@@ -10,7 +10,7 @@ export function isPlatformHostname(hostname: string): boolean {
 export function applySearchIndexPolicy(request: Request, response: Response): Response {
   if (!isPlatformHostname(new URL(request.url).hostname)) return response;
 
-  const contentType = response.headers.get("content-type")?.split(";", 1)[0].trim().toLowerCase();
+  const contentType = response.headers.get("content-type")?.split(";", 1)[0]?.trim().toLowerCase();
   if (contentType !== "text/html" && contentType !== "application/xhtml+xml") return response;
 
   const headers = new Headers(response.headers);
