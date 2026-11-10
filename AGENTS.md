@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Apply platform-host HTML noindex at the final server response boundary using the request URL hostname, including errors; never use global metadata or forwarded hosts, so custom-domain SEO remains unchanged.
