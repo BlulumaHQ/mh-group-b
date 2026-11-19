@@ -76,7 +76,7 @@ export function Footer() {
         <div className="shell py-6">
           <p className="text-xs tracking-[0.08em] text-ivory/55">
             © {year} MH Group LLC. {t(content.footer.rights, lang)}
-          </p>
+          {" "}<span className="block mt-1 opacity-80" data-concept-note>Design concept for portfolio purposes only. Not the official website of MH Group.</span></p>
         </div>
       </div>
     </footer>
